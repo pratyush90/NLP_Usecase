@@ -8,6 +8,7 @@ from src.utils.data_mgmt import process_posts
 # import src.utils.common.read_yaml
 import random
 import numpy as np
+from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 
 
 STAGE = "Two" ## <<< change stage name 

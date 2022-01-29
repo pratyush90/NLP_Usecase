@@ -13,7 +13,7 @@ def process_posts(fd_in, fd_out_train, fd_out_test, target_tag, split):
             attr = ET.fromstring(line).attrib
 
             pid = attr.get("Id", "")
-            label = 1 if target_tag in attr.get("tags", "") else 0
+            label = 1 if target_tag in attr.get("Tags", "") else 0
             title = re.sub(r"\s+", " ", attr.get("Title", "")).strip()
             body = re.sub(r"\s+", " ", attr.get("Body", "")).strip()
             text = title + " " + body
